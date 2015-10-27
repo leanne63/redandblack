@@ -160,7 +160,7 @@
 		<?php the_content(); ?>
 		<div id="contact-form">
 			<?php
-				printf( $GLOBALS['response'], sanitize_text_field( $user_name ) );
+				printf( $GLOBALS['redandblack_response'], sanitize_text_field( $user_name ) );
 			?>
 			<form action="<?php esc_url( get_permalink( $post->post_parent ) ) ?>" method="POST">
 				<div id="contact-name-div" class="contact-item-div">
