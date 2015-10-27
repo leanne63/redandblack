@@ -1,0 +1,13 @@
+/*
+Theme Name: Red and Black
+Description: Used to style the TinyMCE editor.
+
+Using the existing style sheet values, with minor modifications for editing clarity.
+*/
+
+@import url("style.css");
+
+body#tinymce {
+	margin: .5em auto;
+	width: 96%;
+}
