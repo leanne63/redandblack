@@ -8,8 +8,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: dark, black, red, fluid-layout, responsive-layout, theme-options, editor-style, featured-images
 
 == Description ==
-This theme is all about red and black. Child pages appear in columns within their parent page, rather
-than as separate menu items. Two featured pages may be selected to appear on the "home" page.
+This theme is all about red and black. Child pages appear in columns under the text of their parent page, rather
+than as separate menu items. Up to two featured pages may be selected to as columns on the designated "front" page.
 
 * Mobile-first, Responsive Layout
 * Social Links
@@ -18,7 +18,7 @@ than as separate menu items. Two featured pages may be selected to appear on the
 == Special Notes ==
 
 * If setting a particular page for your blog, make sure to set the slug of that page to 'blog'.
-* In order to display a contact form within this theme, set the slug of the contact page to 'contact-us'.
+* In order to display a contact form within this theme, set the slug of the desired contact page to 'contact-us'.
 
 == Installation ==
 
