@@ -1,6 +1,6 @@
 <?php
 /**
- * Red and Black Customizer support
+ * RedAndBlack Customizer support
  */
 
 /**

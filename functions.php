@@ -1,6 +1,6 @@
 <?php
 /**
- * Red and Black functions and definitions.
+ * RedAndBlack functions and definitions.
  *
  * @link https://codex.wordpress.org/Functions_File_Explained
  *
@@ -74,7 +74,7 @@ add_action( 'init', 'redandblack_menus_init' );
 
 if ( ! function_exists( 'redandblack_widgets_init' ) ) :
 /**
- * Register Red and Black widget areas.
+ * Register RedAndBlack widget areas.
  */
 function redandblack_widgets_init() {
 	register_sidebar( array(

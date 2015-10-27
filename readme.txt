@@ -1,4 +1,4 @@
-=== Red and Black ===
+=== RedAndBlack ===
 Contributors: LeAnne Lis
 Requires at least: WordPress 4.1
 Tested up to: WordPress 4.3
@@ -22,7 +22,6 @@ than as separate menu items. Two featured pages may be selected to appear on the
 
 == Installation ==
 
-// TODO: update these instructions!
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
 2. Type in Twenty Fifteen in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
@@ -31,8 +30,8 @@ than as separate menu items. Two featured pages may be selected to appear on the
 
 == Copyright ==
 
-Red and Black for WordPress, Copyright 2015 LeAnne Lis
-Red and Black is distributed under the terms of the GNU GPL
+RedAndBlack for WordPress, Copyright 2015 LeAnne Lis
+RedAndBlack is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -44,7 +43,12 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Red and Black includes code adapted from the following third-party resources:
+Provided screenshot used with permission:
+Andrew Francis, owner
+1 on 1 Fitness Training, LLC,
+Saint Louis, Missouri.
+
+RedAndBlack includes code adapted from the following third-party resources:
 
 Twenty Fourteen Theme
 The WordPress Team
@@ -100,8 +104,8 @@ LinkedIn:	https://brand.linkedin.com/downloads
 Note: As of the date accessed, Facebook specifies a minimum icon size of 29px.
 YouTube specifies a minimum width of 34px. This theme is using a min-height and
 min-width value of 34px which should meet these requirements. Users of this
-theme are individually responsible for ensuring the icons used meet the
-any related branding requirements.
+theme are individually responsible for ensuring the icons used meet any related
+branding requirements.
 
 Other icons, accessed 9 October 2015, from:
 Email icon:	https://pixabay.com/en/at-internet-mail-email-e-mail-217785/
