@@ -15,16 +15,16 @@
 <?php /**************************************************************************/ ?>
 <?php
 	//response messages and other constants
-	define( 'NOT_HUMAN', 'Human verification incorrect.' );
-	define( 'MISSING_CONTENT', 'Please supply all required information.' );
-	define( 'NAME_INVALID', 'Name contains invalid characters. Only letters, apostrophe, and hyphen allowed.' );
-	define( 'EMAIL_INVALID', 'Email address invalid.' );
-	define( 'PHONE_INVALID', 'Phone contains invalid characters.' );
-	define( 'MESSAGE_SEND_FAILED', 'Message was not sent. Try Again.' );
-	define( 'MESSAGE_SENT', 'Thanks, %s! Your message has been sent.' );
+	define( 'REDANDBLACK_NOT_HUMAN', 'Human verification incorrect.' );
+	define( 'REDANDBLACK_MISSING_CONTENT', 'Please supply all required information.' );
+	define( 'REDANDBLACK_NAME_INVALID', 'Name contains invalid characters. Only letters, apostrophe, and hyphen allowed.' );
+	define( 'REDANDBLACK_EMAIL_INVALID', 'Email address invalid.' );
+	define( 'REDANDBLACK_PHONE_INVALID', 'Phone contains invalid characters.' );
+	define( 'REDANDBLACK_MESSAGE_SEND_FAILED', 'Message was not sent. Try Again.' );
+	define( 'REDANDBLACK_MESSAGE_SENT', 'Thanks, %s! Your message has been sent.' );
 	
-	define( 'HUMAN_VERIFICATION_VALUE', '2' );
-	define( 'DISALLOWED_NAME_VALUES', "/[^A-Za-z' -]/" ); // note: ^ means NOT
+	define( 'REDANDBLACK_HUMAN_VERIFICATION_VALUE', '2' );
+	define( 'REDANDBLACK_DISALLOWED_NAME_VALUES', "/[^A-Za-z' -]/" ); // note: ^ means NOT
 
 	// default form values
 	$user_name = '';
@@ -51,7 +51,7 @@
 		
 		if ( $is_human_message ) {		
 			$user_name = stripslashes( $_POST['contact-name'] );
-			$is_valid_name = ( 0 === preg_match( DISALLOWED_NAME_VALUES, $user_name ) );
+			$is_valid_name = ( 0 === preg_match( REDANDBLACK_DISALLOWED_NAME_VALUES, $user_name ) );
 
 			$email_address = is_email( $_POST['contact-econtact'] );
 			$is_valid_email = ( false !== $email_address );
@@ -64,7 +64,7 @@
 			$message = stripslashes( $_POST['contact-text'] );
 
 			$verify_human = $_POST['contact-verify-human'];
-			$is_verified_human = ( HUMAN_VERIFICATION_VALUE === $verify_human );
+			$is_verified_human = ( REDANDBLACK_HUMAN_VERIFICATION_VALUE === $verify_human );
 
 			// validate contact fields
 			$is_validated = false;
@@ -72,19 +72,19 @@
 				 empty( $email_address )	||
 				 empty( $message ) ) {
 
-				redandblack_contact_form_generate_response("error", MISSING_CONTENT);
+				redandblack_contact_form_generate_response("error", REDANDBLACK_MISSING_CONTENT);
 
 			} else if ( ! $is_valid_name ) {
-				redandblack_contact_form_generate_response("error", NAME_INVALID);
+				redandblack_contact_form_generate_response("error", REDANDBLACK_NAME_INVALID);
 
 			} else if ( ! $is_valid_email ) {
-				redandblack_contact_form_generate_response("error", EMAIL_INVALID);
+				redandblack_contact_form_generate_response("error", REDANDBLACK_EMAIL_INVALID);
 
 			} else if ( ! $is_valid_phone ) {
-				redandblack_contact_form_generate_response("error", PHONE_INVALID);
+				redandblack_contact_form_generate_response("error", REDANDBLACK_PHONE_INVALID);
 
 			} else if ( ! $is_verified_human ) {
-				redandblack_contact_form_generate_response("error", NOT_HUMAN);
+				redandblack_contact_form_generate_response("error", REDANDBLACK_NOT_HUMAN);
 
 			} else {
 				$is_validated = true;
@@ -119,10 +119,10 @@
 				$sent = wp_mail($to, $subject, $full_message, $headers);
 				if ($sent) {
 					$disabled_attribute = 'disabled ';
-					redandblack_contact_form_generate_response("success", MESSAGE_SENT);
+					redandblack_contact_form_generate_response("success", REDANDBLACK_MESSAGE_SENT);
 					
 				} else {
-					redandblack_contact_form_generate_response("error", MESSAGE_SEND_FAILED);
+					redandblack_contact_form_generate_response("error", REDANDBLACK_MESSAGE_SEND_FAILED);
 				}
 			}
 		} else { // this is a spambot message - just clear everything out

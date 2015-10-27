@@ -9,14 +9,14 @@
 
 /* max number featured pages user can select */
 	/* 
-	 * NOTE: ensure that MAX_NUM_FEATURED_PAGES value matches number of
+	 * NOTE: ensure that REDANDBLACK_MAX_NUM_FEATURED_PAGES value matches number of
 	 * featured pages user can select in the Customizer
 	 * (set in customizer.php)
 	 */
-define( 'MAX_NUM_FEATURED_PAGES', 2 );
+define( 'REDANDBLACK_MAX_NUM_FEATURED_PAGES', 2 );
 
 /* store social site names in array that can be used as needed */
-$social_sites = array(
+$redandblack_social_sites = array(
 	'facebook',
 	'google-plus',
 	'twitter',
@@ -31,7 +31,7 @@ $social_sites = array(
 );
 
 /* store response message for contact form submit */
-$response = "";
+$redandblack_response = "";
 
 
 /*** FUNCTIONS ***/
@@ -275,16 +275,16 @@ if ( ! function_exists( 'redandblack_contact_form_generate_response' ) ) :
 	 * @param $type : string indicating form validation error or success
 	 * @param $message : string containing message related to validation result
 	 * 
-	 * @return not applicable : side effect - sets global $response variable value
+	 * @return not applicable : side effect - sets global $redandblack_response variable value
 	 */
 function redandblack_contact_form_generate_response($type, $message)
 {
-	global $response;
+	global $redandblack_response;
 
 	if ($type == "success") {
-		$response = "<div class=\"success\">{$message}</div>";
+		$redandblack_response = "<div class=\"success\">{$message}</div>";
 	} else {
-		$response = "<div class=\"error\">{$message}</div>";
+		$redandblack_response = "<div class=\"error\">{$message}</div>";
 	}
 }
 endif;

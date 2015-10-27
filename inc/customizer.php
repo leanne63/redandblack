@@ -111,7 +111,7 @@ function redandblack_customize_register( $wp_customize ) {
 	/***** end featured pages panel *****/
 	/* 
 	 * NOTE: if changing number of featured pages that user can select,
-	 * ensure that MAX_NUM_FEATURED_PAGES value is set correctly
+	 * ensure that REDANDBLACK_MAX_NUM_FEATURED_PAGES value is set correctly
 	 * (in template-tags.php)
 	 */
 
@@ -149,9 +149,9 @@ function redandblack_customize_register( $wp_customize ) {
 	);
 	
 	/*** other social media ***/
-	global $social_sites;
+	global $redandblack_social_sites;
 	
- 	foreach($social_sites as $social_site) {
+ 	foreach($redandblack_social_sites as $social_site) {
 		$social_site = sanitize_text_field( $social_site );
 		$setting_id = $section_id . '_' . $social_site;
  
