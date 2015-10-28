@@ -201,7 +201,6 @@
 				<?php if ( '' === $disabled_attribute ) : ?>
 				<div id="contact-buttons-div" class="contact-item-div">
 					<button type="submit" name="submit-button" value="submit">Submit</button>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<button type="reset" name="reset-button" value="reset">Reset</button>
 				</div>
 				<?php endif; ?>
