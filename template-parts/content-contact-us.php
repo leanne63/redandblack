@@ -118,10 +118,30 @@
 
 				$sent = wp_mail($to, $subject, $full_message, $headers);
 				if ($sent) {
+					if ( WP_DEBUG ) {
+						$log_string = 'EMAIL MESSAGE SENT' . $newline;
+						$log_string = $log_string . $headers[ 0 ] . $newline;
+						$log_string = $log_string . $headers[ 1 ] . $newline;
+						$log_string = $log_string . 'To: ' . $to . $newline;
+						$log_string = $log_string . 'Subject: ' . $subject . $newline;
+						$log_string = $log_string . 'Message Body: ' . $newline . $full_message . $newline;
+						error_log($log_string);
+					}
+					
 					$disabled_attribute = 'disabled ';
 					redandblack_contact_form_generate_response("success", REDANDBLACK_MESSAGE_SENT);
 					
 				} else {
+					if ( WP_DEBUG ) {
+						$log_string = 'MESSAGE MESSAGE FAILED' . $newline;
+						$log_string = $log_string . $headers[ 0 ] . $newline;
+						$log_string = $log_string . $headers[ 1 ] . $newline;
+						$log_string = $log_string . 'To: ' . $to . $newline;
+						$log_string = $log_string . 'Subject: ' . $subject . $newline;
+						$log_string = $log_string . 'Message Body: ' . $newline . $full_message . $newline;
+						error_log($log_string);
+					}
+					
 					redandblack_contact_form_generate_response("error", REDANDBLACK_MESSAGE_SEND_FAILED);
 				}
 			}

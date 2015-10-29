@@ -401,6 +401,7 @@ function redandblack_get_domain() {
 		case 2:
 			// eg, domain.com
 			$domain = [ 'domain' => $domain_parts[0], 'tld' => $domain_parts[1] ];
+			break;
 		case 3:
 			// eg, www.domain.com - want domain, com
 			$domain = [ 'domain' => $domain_parts[1], 'tld' => $domain_parts[2] ];
